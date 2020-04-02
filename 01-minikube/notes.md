@@ -1,4 +1,4 @@
-# Einstieg in Kubernetes mit Minikube - Befehle
+# Einstieg in Kubernetes mit Minikube
 
 ## Container (Docker)
 
@@ -12,14 +12,19 @@ docker run -p 6379:6379 -it redis
 ```
 
 Optionen:
-- **-p 6379:6379** : richte Port-Mapping mit port_host:port_container ein
-- **-it** : starte im interaktiven Modus
+- **-p 6379:6379** : richte ein Port-Mapping mit port_host:port_container ein
+- **-it** : starte den Container im interaktiven Modus
 
 Starte redis-cli:
 
 ```bash
 redis-cli
 ```
+
+## kubectl
+
+Hinweise zur Installation von kubectl können hier abgerufen werden: 
+[Install kubectl](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
 
 ## Minikube
 
