@@ -1,5 +1,5 @@
-# deepshore-labs
-Materialien zu den Deepshore Labs
+# deeptalk
+Materialien zu den Deep-Talks
 
 ## Themenvorschläge
 - Einstieg in Kubernetes mit Minikube
