@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: demo-deploy
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kubia
+
+  template:
+    metadata:
+      # Dieses Label/diese Labels kann/können von einem Service genutzt werden.
+      # Die vom Deployment automatisch erzeugten ReplicaSets vergeben ein
+      # zusätzliches Label an ihre Pods mit ihrem Namen (pod-template-hash).
+      # Pods gehören zu einem ReplicaSet, wenn ALLE geforderten Labels passen
+      labels:
+        app: kubia
+    spec:
+      containers:
+      - image: luksa/kubia:v4
+        name: kubia
