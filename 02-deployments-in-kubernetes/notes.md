@@ -56,7 +56,7 @@ Alternativ kann man das Replicaset entsprechend editieren:
 kubectl edit replicaset demo-rs
 ```
 
-### Skaliere eine Replicaset
+### Skalieren eines Replicasets
 
 Aus dem aktuellen Verzeichnis lautet der Befehl wie folgt:
 
@@ -75,6 +75,8 @@ kubectl create -f manifests/demo-pod.yaml
 ```
 
 ### Erzeuge ein Deployment imperativ
+
+Imperativ wird ein Deployment wie folgt erzeugt:
 
 ```bash
 kubectl create deployment imperativ-deployment --image=nginx
