@@ -1,8 +1,11 @@
 # deeptalk
+
 Materialien zu den DEEPTALKs
 
-**Kontakt:**
+## Kontakt
+
 florian.boldt@deepshore.de
+
 malte.groth@deepshore.de
 
 
