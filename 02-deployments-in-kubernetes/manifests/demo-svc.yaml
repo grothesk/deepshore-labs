@@ -12,5 +12,4 @@ spec:
     targetPort: 8080
   selector:
     app: kubia
-  # Service über alle Nodes erreichbar - mittels dem
   type: NodePort
