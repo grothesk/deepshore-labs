@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  INFLUX_HOST: {{ .Release.Name }}-influxdb
+  INFLUXDB_DB: {{ .Values.influx.db }}
+  INFLUX_PORT: "{{ .Values.influx.service.port }}"
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-deeptalk-app

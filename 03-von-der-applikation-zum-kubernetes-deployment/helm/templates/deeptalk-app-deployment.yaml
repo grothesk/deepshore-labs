@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: deeptalk-app
+  name: {{ .Release.Name }}-deeptalk-app
+spec:
+  replicas: {{ .Values.app.replicaCount }}
+  selector:
+    matchLabels:
+      app: deeptalk-app
+  template:
+    metadata:
+      labels:
+        app: deeptalk-app
+    spec:
+      containers:
+      - image: grothesk/deeptalk-app:1.0.0
+        name: deeptalk-app
+        envFrom:
+          - configMapRef:
+              name: {{ .Release.Name }}-deeptalk-app

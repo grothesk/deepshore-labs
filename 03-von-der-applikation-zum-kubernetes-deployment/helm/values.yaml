@@ -1,0 +1,17 @@
+app:
+  replicaCount: 1
+  service:
+    port: 80
+    type: ClusterIP
+
+influx:
+  db: deeptalk
+  service:
+    port: 8086
+    type: ClusterIP
+
+grafana:
+  secretName: grafana
+  service:
+    port: 3000
+    type: ClusterIP
