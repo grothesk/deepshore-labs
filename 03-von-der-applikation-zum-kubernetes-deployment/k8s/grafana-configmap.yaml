@@ -202,5 +202,4 @@ data:
       database: deeptalk
 kind: ConfigMap
 metadata:
-  creationTimestamp: null
   name: grafana
