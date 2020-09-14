@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: postgres-db
+  name: postgres-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-db
+  template:
+    metadata:
+      labels:
+        app: postgres-db
+    spec:
+      containers:
+      - image: postgres:latest
+        name: postgres-db
+        env:
+          - name: POSTGRES_DB
+            value: "deeptalk"
+          - name: POSTGRES_USER
+            value: "postgres"
+          - name: POSTGRES_PASSWORD
+            value: "root"
+
+#        envFrom:
+#          - configMapRef:
+#              name: postgres-configmap
+#          - secretRef:
+#              name: postgres-secret

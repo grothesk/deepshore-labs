@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: postgres-client
+  name: postgres-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-client
+  template:
+    metadata:
+      labels:
+        app: postgres-client
+    spec:
+      containers:
+      - image: postgres:latest
+        name: postgres-client
+        env:
+          - name: POSTGRES_HOST
+            value: "postgres-db"
+          - name: POSTGRES_USER
+            value: "postgres"
+          - name: POSTGRES_PASSWORD
+            value: "root"
+          - name: POSTGRES_DB
+            value: "deeptalk"
+          - name: PGPASSWORD
+            value: "root"
+
+#        envFrom:
+#          - configMapRef:
+#              name: postgres-configmap
+#          - secretRef:
+#              name: postgres-secret
