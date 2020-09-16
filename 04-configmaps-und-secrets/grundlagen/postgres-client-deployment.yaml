@@ -19,15 +19,13 @@ spec:
         name: postgres-client
         env:
           - name: POSTGRES_HOST
-            value: "postgres-db"
+            value: "postgres-server"
           - name: POSTGRES_USER
             value: "postgres"
           - name: POSTGRES_PASSWORD
-            value: "root"
-          - name: POSTGRES_DB
-            value: "deeptalk"
+            value: "deeptalk123"
           - name: PGPASSWORD
-            value: "root"
+            value: "deeptalk123"
 
 #        envFrom:
 #          - configMapRef:

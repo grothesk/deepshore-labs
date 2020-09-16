@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: postgres-db
+      app: postgres-server
   template:
     metadata:
       labels:
-        app: postgres-db
+        app: postgres-server
     spec:
       containers:
       - image: postgres:latest
@@ -23,7 +23,7 @@ spec:
           - name: POSTGRES_USER
             value: "postgres"
           - name: POSTGRES_PASSWORD
-            value: "root"
+            value: "deeptalk123"
 
 #        envFrom:
 #          - configMapRef:

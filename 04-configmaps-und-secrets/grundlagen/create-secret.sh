@@ -1,1 +1,1 @@
-kubectl create secret generic postgres-secret --from-literal=POSTGRES_USER=postgres --from-literal=POSTGRES_PASSWORD=root --from-literal=PGPASSWORD=root
+kubectl create secret generic postgres-secret --from-literal=POSTGRES_USER=postgres --from-literal=POSTGRES_PASSWORD=deeptalk123 --from-literal=PGPASSWORD=deeptalk123
