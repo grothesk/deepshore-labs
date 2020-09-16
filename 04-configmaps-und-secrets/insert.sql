@@ -2,6 +2,7 @@ INSERT INTO listeners (name, age) VALUES
     ('Malte', 29),
     ('Frederic', 19),
     ('Andy', 28),
-    ('Falk', 49),
-    ('Florian', 42)
+    ('Falk', 51),
+    ('Florian', 42),
+    ('Uli', 14)
     ;

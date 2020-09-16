@@ -2,10 +2,10 @@ apiVersion: 1
 datasources:
   - name: Postgres
     type: postgres
-    url: postgres-db:5432
+    url: postgres-server:5432
     database: deeptalk
     user: postgres
     secureJsonData:
-      password: "root"
+      password: "deeptalk123"
     jsonData:
       sslmode: "disable"
