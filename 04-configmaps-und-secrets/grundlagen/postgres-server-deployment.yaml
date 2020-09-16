@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - image: postgres:latest
-        name: postgres-db
+        name: postgres-server
         env:
           - name: POSTGRES_DB
             value: "deeptalk"
@@ -27,6 +27,6 @@ spec:
 
 #        envFrom:
 #          - configMapRef:
-#              name: postgres-configmap
+#              name: postgres
 #          - secretRef:
-#              name: postgres-secret
+#              name: postgres

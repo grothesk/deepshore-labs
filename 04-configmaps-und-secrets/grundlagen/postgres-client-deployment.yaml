@@ -17,18 +17,8 @@ spec:
       containers:
       - image: postgres:latest
         name: postgres-client
-        env:
-          - name: POSTGRES_HOST
-            value: "postgres-server"
-          - name: POSTGRES_USER
-            value: "postgres"
-          - name: POSTGRES_PASSWORD
-            value: "deeptalk123"
-          - name: PGPASSWORD
-            value: "deeptalk123"
-
-#        envFrom:
-#          - configMapRef:
-#              name: postgres-configmap
+        envFrom:
+          - configMapRef:
+              name: postgres
 #          - secretRef:
-#              name: postgres-secret
+#              name: postgres
